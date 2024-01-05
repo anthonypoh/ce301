@@ -17,4 +17,5 @@ EXPOSE 5000
 # ENV NAME World
 
 # Run app.py when the container launches
-CMD ["python", "app.py"]
+# CMD ["python", "app.py"]
+CMD ["waitress-serve", "--host=0.0.0.0", "--port=5000", "app:app"]
